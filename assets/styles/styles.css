@@ -1,0 +1,152 @@
+.grid-container {
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 1fr; 
+    grid-template-areas:
+      "navbar"
+      "filtroBusqueda"
+      "seccionPrincipal"
+      "piedepagina";
+  }/* aplica el template areas 3p*/
+
+  .menuDesplegado{
+    display: none;
+  }
+  
+  .navbar {
+    grid-area: navbar;
+    background-color: #451E15;
+    margin:0;
+    color:#DEB887;
+    font-weight: 600;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    
+  
+  }
+  .iconNombre{
+    display: flex;
+    
+  }
+  
+  .filtroBusqueda {
+    grid-area: filtroBusqueda;
+    background-color: #DEB887;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color:#451E15;
+    
+
+  }
+
+.opcionesCafe{
+    width: 80vw;
+    margin-bottom: 2%;
+  }
+
+  .seccionPrincipal {
+    grid-area: seccionPrincipal;
+    background-color: #FFF8DC;
+    
+    
+  }
+
+  .productos{
+    border: 1px #451E15 solid ;
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    
+   
+  }
+
+  .botonesPadre{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: end;
+    
+  }
+
+  .botones{
+    border: 1px #451E15 solid;
+  }
+  
+  
+
+  .piedepagina {
+    grid-area: piedepagina;
+    background-color: #451E15;
+    color: #DEB887;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+   
+   
+  }
+
+ .iconbars{
+    color:#DEB887;
+  }
+  
+  /* 3 puntos media query*/
+@media (min-width: 576px) { 
+
+    .menuDesplegado{
+        display:flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        background-color: #DEB887;
+        color: #451E15;
+    }
+
+    .grid-container {
+        height: 100vh;
+        display: grid;
+        grid-template-columns: 1fr 5fr;
+        grid-template-areas:
+          "navbar filtroBusqueda"
+          "menuDesplegado seccionPrincipal"
+          "piedepagina seccionPrincipal"
+          
+          
+      }
+    
+      .iconodebarra{
+        display: none;
+      }
+
+    
+
+      .seccionPrincipal{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap:10px;
+        justify-content: center;
+
+      }
+
+      .productos{
+        gap: 1px;
+        width: 20vw;
+      }
+      
+      .piedepagina{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+      }
+      .botonesPadre{
+        display: none;
+      }
+}
